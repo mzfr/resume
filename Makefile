@@ -1,7 +1,7 @@
 default: clean compile
 
 compile:
-	@latexmk -silent -pdf -pdflatex='pdflatex -interaction=nonstopmode' resume.tex
+	@latexmk -silent -f -pdf -pdflatex='pdflatex -interaction=nonstopmode' resume.tex
 
 error:
 	@latexmk -pdf -pdflatex='pdflatex -file-line-error -interaction=errorstopmode' resume.tex
