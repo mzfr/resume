@@ -1,33 +1,204 @@
-\documentclass[12pt, a4paper, sans, obeyspaces, unicode]{moderncv}
+\documentclass[letterpaper,11pt]{article}
 
-\moderncvstyle{casual}
-\moderncvcolor{blue}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
 
-\usepackage[scale=0.8]{geometry}
-\setlength{\hintscolumnwidth}{3cm}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
 
-\usepackage{xcolor}
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
 
-\input{sections/bio.tex}
+\urlstyle{same}
 
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{ #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\colab}[2]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\projects}[3]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {#2} \\
+      \textit{\small #3} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
 \begin{document}
-\maketitle
 
-\vspace{0.5cm}
-\section{Work}
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{mzfr.github.io/}{\Large Mehtab Zafar}} & Email : \href{mailto:mehtab.zafar98@gmail.com}{mehtab.zafar98@gmail.com}\\
+  \href{mzfr.github.io}{mzfr.github.io} & Mobile : +91-9910195582 \\
+\end{tabular*}
 
-    \input{sections/work.tex}
-
-\section{Projects}
-
-    \input{sections/projects.tex}
-
-\section{Collaborator}
-
-    \input{sections/collaborator.tex}
-
+%-----------EDUCATION-----------------
 \section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Inderprastha Engineering College}{Sahibabad}
+      {Bachelor of Technology in Computer Science;  Percentage: 81\%}{Jul. 2017 -- Present}
+  \resumeSubHeadingListEnd
 
-    \input{sections/education.tex}
+%-----------WORK-----------------
+\section{WORK}
+  \resumeSubHeadingListStart
 
+    \resumeSubheading
+      {Kharagpur Winter of Code}{Kharagpur Open Source Society}
+      {Student Developer}{Dec 2018 -- Jan 2019}
+      \resumeItemListStart
+        \resumeItem{Vault}
+          {: Vault is an open source Automated Reconnaissance tool. Added honeypot detection functionality and various vulnerability testers.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Google Summer of code}{XBMC foundation}
+      {Student Developer}{May 2018 -- Aug 2018}
+      \resumeItemListStart
+        \resumeItem{Addon-check}
+          {: Addon-check is an open source tool for performing static code analysis on Kodi's addon. Added functionalities to perform static code analysis. Also improved it's code coverage and terminal UI.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Google Code-In}{}
+      {Student Developer}{Dec 2015 -- Feb 2016}
+      \resumeItemListStart
+        \resumeItem{}
+          {Fixed multiple issues from MetaBrainz Foundataion and Wikimedia Foundation.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+
+    \projects
+      {liffy}{Python}
+      {May 2019 -- Jun 2019}
+      \resumeItemListStart
+        \resumeSubItem{}
+          {A tool to perform Local file inclusion attack.}
+      \resumeItemListEnd
+
+    \projects
+      {List writeups}{Python}
+      {Nov 2018 -- Mar 2019}
+      \resumeItemListStart
+        \resumeItem{}
+          {A tool that allows you to easily list all the writeups from CTFtime.org.}
+      \resumeItemListEnd
+
+    \projects
+      {LiTour}{Python}
+      {Jul 2019 -- Oct 2019}
+      \resumeItemListStart
+        \resumeItem{}
+          {A tool that allows you to add Lichess Tournaments to your Google Calendar.}
+      \resumeItemListEnd
+
+    \projects
+      {PGN to GIF convertor}{Python}
+      {Jun 2018 -- Jul 2018}
+      \resumeItemListStart
+        \resumeItem{}
+          {A tool that creates GIF file from PGN files.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+% --------Collaborator------------
+\section{Collaborator}
+  \resumeSubHeadingListStart
+
+    \colab
+      {Cowrie}{Jan 2019 -- Present}
+      \resumeItemListStart
+        \resumeItem{}
+          {Extended output plugins support in an SSH honeypot.}
+      \resumeItemListEnd
+
+    \colab
+      {domained}{Jun 2019 -- Present}
+      \resumeItemListStart
+        \resumeItem{}
+          {Refactored the code base for a domain enumeration tool.}
+      \resumeItemListEnd
+
+    \colab
+      {Vault}{Dec 2018 -- Present}
+      \resumeItemListStart
+        \resumeItem{}
+          {Added various vulnerability scanners to an automated Reconnaissance tool.}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+% --------PROGRAMMING SKILLS------------
+\section{Skills}
+ \resumeSubHeadingListStart
+   \resumeSubItem{Languages}
+      {C/C++, Python, JAVA, Bash, Javascript}
+   \resumeSubItem{Web}
+      {HTML, CSS, Flask}
+   \resumeSubItem{Others}
+      {git, \LaTeX, docker, Jekyll}
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
 \end{document}

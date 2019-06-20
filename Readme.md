@@ -1,24 +1,17 @@
-
 # Resume
 
-My LaTeX based resume. Uses the [moderncv](https://www.ctan.org/pkg/moderncv) template with some slight modifications.
+This is my resume :smile:
 
-## Todos
+![resume](./resume.png)
 
-* Figure out how to have two separate versions
-    * for Desktop & for Print.
-    * Print version won't have any URLs etc.
+## Template
 
-* Use `pandoc` to generate *decent* markdown.
+This is a plain and simple template. If you want to make any changes to the style then consider changing [`Custom commands`](./resume.tex#L40).
 
-* Color / B & W Modes
+To compile the `.tex` file use [laton](./laton) in the following way:
 
-* Figure out how to track the edited moderncv theme with git
+```bash
+$ ./laton resume.tex
+```
 
-**Issues**
-
-* Add some space between Project title and it's description.
-
-* Some part is italics, and then suddenly the next part isn't. Looks Odd, IMO.
-
-* Display links to code.
+The `laton` file is taken from https://github.com/aslushnikov/latex-online
