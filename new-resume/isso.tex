@@ -29,22 +29,23 @@
   % for \cvskill if you want to
   \renewcommand{\itemmarker}{{\small\textbullet}}
   \renewcommand{\ratingmarker}{\faCircle}
+  \newcommand{\SubItem}[1]{
+    {\setlength\itemindent{15pt}\item[-] #1}
+}
 
   \addbibresource{sample.bib}
 
   \pdfmapfile{+fontawesome5.map}
 
-
-
-
   \begin{document}
 
   \name{\huge Mehtab Zafar}
-  \tagline{Information Security / Software Development}
+  \tagline{Product Security Engineer}
   \personalinfo{%
-    \hspace{1.3cm}\email{\normalsize hello@mzfr.me}\hspace{1.33cm}\linkedin{\normalsize \href{https://www.linkedin.com/in/mzfr/}{linkedin.com/in/mzfr/}}
+    \hspace{0.6cm}\email{\normalsize mehtabzafar@mzfr.me}
+    \hspace{1.1cm}\linkedin{\normalsize\href{https://www.linkedin.com/in/mzfr/}{linkedin.com/in/mzfr/}}
 
-    \hspace{1.3cm}{\normalsize\href{https://hackerone.com/mzfr}{hackerone.com/mzfr}} \hspace{1.5cm}\github{\normalsize github.com/mzfr}
+    \hspace{1.3cm} \hspace{1.5cm}
   }
 
   \begin{fullwidth}
@@ -53,49 +54,49 @@
 
   \AtBeginEnvironment{itemize}{\small}
 
-  \cvsection[page1sidebar]{Work Experience}
-  \cvevent{BugBounty}{Hackerone / Bugcrowd / Initgriti}{Aug 2020 -- ongoing}{Independent/Remote}
-
+  \cvsection[page1sidebar]{Professional Experience}
+  \cvevent{Product Security Engineer}{Red Queen Dynamics}{July 2021 -- Aug 2023}{Washington, D.C}
   \begin{itemize}
-
-  \item Reported bugs to several Fortune 500 companies.
-  \item Focusing mostly on Web and Mobile application related vulnerabilities.
-  \item Hall of Fame in companies like GitHub, PayPal, US Department of Defense, DELL, Atlassian, Zynga etc
-
+      \item Worked as a full-stack dev to develop from scratch a security training product (using Django/PostgreSQL) and created a CI/CD pipeline for automated deployments.
+      \item Handled DevOps for the team i.e. created and managed cloud infrastructure (AWS) to support internal applications.
+      \item Performed ad-hoc penetration tests for various clients.
+  \end{itemize}
+  \divider
+  \cvevent{BugBounty}{Hackerone / Bugcrowd / Intigriti}{Aug 2020 -- ongoing}{Independent/Remote}
+  \begin{itemize}
+  
+  \item Listed on Hall of Fame for various companies, such as \textbf{Google}, GitHub, PayPal, US Department of Defense, DELL, Atlassian, Zynga.
+\item Performed static code analysis to identify various vulnerabilities in APK files.
+  \item Performed zero-day research on open-source software.
+ 
   \end{itemize}
 
   \divider
 
   \cvevent{Developer}{The Honeynet Project {\hspace{0.5cm}\color{accent} \faGithub \href{https://github.com/mushorg/tanner/commits?author=mzfr}{\small \normalfont \hspace{1mm}Code}}}{May 2020 -- August 2020}{Google Summer of Code}
   \begin{itemize}
-  \item Made improvement in a high interaction honeypot (Snare/Tanner)
+  \item Improved the speed and functionality of a high-interaction honeypot (Snare/Tanner)
 
   \item Added support for persistent storage using PostgreSQL and SQLAlchemy
   
   \item Improved the API functionality based on the new database structure
-
-  \item Improved cloning functionality using Selenium/Chrome headless browser
-
-  \end{itemize}
-
-  \divider
-
-  \cvevent{Mentor}{MetaBrainz Foundation}{Dec 2019 -- Jan 2020}{Google Code-In}
-  \begin{itemize}
-
-  \item Mentored students from all over the globe on various python projects under the MetaBrainz Foundation.
-
-  \end{itemize}
-
-  \divider
-
-  \cvevent{Content Creator}{Vulnhub / TryHackMe}{Aug 2019 -- March 2020}{Independent/Remote}
-  \begin{itemize}
-  \item Created various CaptureTheFlag (CTF) challenges for \href{https://tryhackme.com/p/falconfeast}\emp{TryHackme.com}} that teaches about Web related vulnerability like XXE, XSS, JWT etc
-
-  \item Created a bunch of potential Vulnerable machines for \href{https://www.vulnhub.com/series/djinn,260/}\emp{VulnHub.com}}
   
-  \item Beta tested various vulnerable virtual machines like TempusFugit series, DC8 for vulnhub.com.
+  \item Both the API and honeypot were written in Python and used libraries like asyncio, Redis, jinja, etc
+  \end{itemize}
+
+
+  \divider
+
+  \cvevent{Devops}{Vulnhub / TryHackMe}{Aug 2019 -- March 2020}{Independent/Remote}
+  \begin{itemize}
+    
+    \item Created various CaptureTheFlag (CTF) challenges for \href{https://tryhackme.com/p/falconfeast}{TryHackme.com} that teach about Web-related vulnerabilities like XXE, XSS, JWT.
+
+    \item Created potential Vulnerable machines for \href{https://www.vulnhub.com/series/djinn,260/}\emp{VulnHub.com}
+    
+    \item All the virtual machines had custom applications made in Python \& bash
+  
+    \item Invited to perform beta test various vulnerable virtual machines like TempusFugit series, DC8 for vulnhub.com.
 
   \end{itemize}
 
@@ -104,9 +105,9 @@
   \cvevent{Developer}{XBMC Foundation {\hspace{0.5cm}\color{accent} \faGithub \href{https://github.com/xbmc/addon-check/commits?author=mzfr}{\small \normalfont \hspace{1mm}Code}}}{May 2018 -- Aug 2018}{Google Summer of Code}
   \begin{itemize}
 
-  \item Worked on an Open source project under a student program by Google.
+  \item Worked on an Open-source project under a student program by Google.
 
-  Developed a tool for performing static code analysis on all addons for Kodi.
+  \item Developed a tool for performing static code analysis on all addons for Kodi, written in Python.
 
   \end{itemize}
 
@@ -116,28 +117,28 @@
   \begin{itemize}
   \item {\color{black} \normalsize \textbf{slicer}} \hfill {\color{accent} \faGithub \href{https://github.com/mzfr/slicer}{ \hspace{0.5mm}Code}}
 
-  A tool that helps in automating the reconnaissance process of Android Package (APK) file. It can show vulnerable activities, receivers and services.
-
-  \divider
-
-  \item {\color{black} \normalsize \textbf{liffy}} \hfill {\color{accent} \faGithub \href{https://github.com/liffy}{ \hspace{0.5mm}Code}}
-
-  A tool to automate the process of discovering and exploiting Local file inclusion attack
-
-  \divider
-
-  \item {\color{black} \normalsize \textbf{gtfo}} \hfill {\color{accent} \faGithub \href{https://github.com/gtfo}{ \hspace{0.5mm}Code}}
-
-  A tool to help you search exploits for various Linux and Windows binaries which can then be used to escalate privileges
-
-  \divider
-
-  \item {\color{black} \normalsize \textbf{cowrie}} \hfill {\color{accent} \faGithub \href{https://github.com/cowrie/cowrie/commits?author=mzfr}{ \hspace{0.5mm}Code}}
-
-  Added support for plugins like DNS reverse lookup, greynoise etc. into SSH, FTP, Telnet based high interaction honeypot.
-
-
+  \begin{itemize}
+      \item Wrote this tool to automate the bug-hunting process on Android applications (APK).
+      \item It can find possible vulnerable activities, receivers, and services.
   \end{itemize}
+
+  \divider
+
+  \item {\color{black} \normalsize \textbf{liffy}} \hfill {\color{accent} \faGithub \href{https://github.com/mzfr/liffy}{ \hspace{0.5mm}Code}}
+
+    \begin{itemize}
+        \item Wrote this tool to automate the process of discovering and exploiting\\ Local file inclusion (LFI) attack which can then be leveraged to get a reverse shell.
+\end{itemize}
+
+  \divider
+
+%   \item {\color{black} \normalsize \textbf{takeover}} \hfill {\color{accent} \faGithub \href{https://github.com/mzfr/takeover}{ \hspace{0.5mm}Code}}
+%     \begin{itemize}
+%         \item Made a CLI tool to check subdomain takeover at a mass scale.
+%         \item Given output of amass/subfinder this tool can check if any of the subdomain is vulnerable to subdomain takeover.
+%     \end{itemize}
+
+%   \end{itemize}
 
   \clearpage
 
